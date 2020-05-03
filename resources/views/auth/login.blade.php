@@ -67,7 +67,7 @@
                    </div>
               </div>
               <div>
-               <button type="submit" class="btn btn-primary"> {{ __('Login') }} </button>
+               <button type="submit" class="btn btn-primary">Valider</button>
                  @if (Route::has('password.request'))
                      <a class="btn btn-link" href="{{ route('password.request') }}">Mot de passe oublié?</a> 
                  @endif
@@ -86,7 +86,7 @@
                 <br />
 
                 <div>
-                  <h3><i class="fa fa-paw"></i> careConcept!</h3>
+                  <h3><i class="fa fa-paw"></i>Suivi de commandes!</h3>
                   <p>NET2ALL©2020 All Rights Reserved</p>
                 </div>
               </div>

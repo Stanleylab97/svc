@@ -26,6 +26,10 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
     Route::resource('/users','UsersController',['except'=>['show','store','create']]);
 });
 
+Route::namespace('\\App\\Http\\Controllers')->prefix('manage')->name('resource.')->middleware('can:manage-users')->group(function(){
+    Route::resource('/commande','CommandeController');
+});
+
 
 
 
