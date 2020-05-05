@@ -12,7 +12,7 @@ class OrigineSeeder extends Seeder
      */
     public function run()
     {
-        Origine::truncate();
+    
         
         $countries =
  

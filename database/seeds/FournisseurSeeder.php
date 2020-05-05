@@ -12,8 +12,7 @@ class FournisseurSeeder extends Seeder
      */
     public function run()
     {
-        Fournisseur::truncate();
-
+        
         Fournisseur::create([
             'nom'=>'DUBOIS Volailles',
             'tel'=>'+338658554'

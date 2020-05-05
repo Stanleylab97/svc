@@ -34,7 +34,7 @@
         <div class="col-md-3 left_col menu_fixed">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>SCV</span></a>
+              <a href="{{route('home')}}" class="site_title"><i class="fa fa-paw"></i> <span>SCV</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -74,14 +74,14 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            careConcept &copy; 2020</a>
+            Stanleylab &copy; 2020</a>
           </div>
           <div class="clearfix"></div>
         </footer>
         <!-- /footer content -->
       </div>
     </div>
-    @yield('footer-scripts')
+    
 
         <!-- jQuery -->
         <script src="{{asset('/gentelella-master/vendors/jquery/dist/jquery.min.js')}}"></script>
@@ -96,6 +96,6 @@
 
         <!-- Custom Theme Scripts -->
         <script src="{{asset('/gentelella-master/build/js/custom.min.js')}}"></script>
-   
+        @yield('footer-scripts')
   </body>
 </html>

@@ -2,11 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Origine;
+use App\Models\Produit;
 use App\Models\Commande;
+use App\Models\Signataire;
+use App\Models\Fournisseur;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 class CommandeController extends Controller
 {
+
+    private static $productsList=array();
     /**
      * Display a listing of the resource.
      *
@@ -24,7 +31,20 @@ class CommandeController extends Controller
      */
     public function create()
     {
-        //
+        $produits=Produit::all();
+        $origines=Origine::all();
+        $fournisseurs=Fournisseur::all();
+        $signataires=Signataire::all();
+        $route = Route::currentRouteName();
+        return view('commande.index',compact('produits','origines','fournisseurs','signataires','route'));
+    }
+    
+
+    public function addToVirtualList($productdetail){
+        $productsList[]=$productdetail;
+        $productsL=array();
+        $productsL= $productsList;
+        return view('commande.index',compact('productsL'));
     }
 
     /**
